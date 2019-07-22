@@ -1,0 +1,230 @@
+/*$ sass --watch styles.scss styles.css*/
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+
+%standar-box {
+  border: 1px solid black;
+  border-radius: 1em;
+  box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  width: 50vw;
+  margin-top: 4em;
+  margin-left: 25%;
+  padding: 1em;
+}
+
+@mixin media($media) {
+  @if $media==xs {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+
+  @else if $media==sm {
+    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $media==md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $media==lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+* {
+  font-family: roboto;
+  padding: 0;
+  margin: 0;
+}
+
+// body {
+//     height: 500vh;
+// }
+
+.menuSuperior {
+  display: flex;
+  justify-content: center;
+
+  .list-group-item {
+    background: rgba(0, 0, 255, 0.219);
+    margin: 2em;
+  }
+}
+
+.header {
+  display: flex;
+  margin-top: 10em;
+  justify-content: space-evenly;
+  width: 100vw;
+
+  .cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(114, 113, 113, 0.404);
+    padding: 5em;
+    margin: 1em;
+    border-radius: 1em;
+    box-shadow: -23px -27px 35px -12px rgba(0, 0, 0, 0.75);
+  }
+
+  header h1 {
+    font-size: 4em;
+  }
+
+  .gift {
+    box-shadow: 40px -27px 35px -12px rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(114, 113, 113, 0.404);
+    border-radius: 1em;
+    padding: 2em;
+  }
+
+  @include media(lg) {
+    .header {
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .gift {
+      display: none;
+      box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
+
+/*about-me section*/
+
+.about-me-grupo {
+  /* border: 1px solid black; */
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 1em;
+  margin-top: 4em;
+  margin-left: 15vw;
+  box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
+
+  .about-me-grupo h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .about-me-grupo h2 {
+    font-size: 1.5em;
+  }
+}
+
+#refran {
+  /* border: 1px solid black; */
+  display: none;
+  color: rgb(180, 178, 178);
+  font-style: italic;
+  margin-top: 5em;
+  margin-bottom: 4em;
+  height: 20em;
+  animation-duration: 3s;
+  animation-name: slidein;
+
+  p {
+    text-align: center;
+    font-size: 2em;
+    width: 50%;
+    margin-top: 2em;
+    margin-left: 15em;
+  }
+
+  @include media(lg) {
+    background: rgba(128, 128, 128, 0.486);
+    width: max-content;
+    color: black;
+    margin-top: 7em;
+  }
+}
+
+.slideIn {
+  display: block;
+  // border: 1px solid black;
+  animation-duration: 3s;
+  animation-name: slidein;
+  background-image: url("./assets/steve_job_2.png");
+  background-size: cover;
+
+  @keyframes slidein {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+.box2 {
+  display: flex;
+
+  .Services {
+    @extend %standar-box;
+    margin: 0;
+    margin-left: 2em;
+
+    @include media(lg) {
+      margin-top: 4em;
+    }
+  }
+
+  .subclases {
+    @extend %standar-box;
+    margin: 2em;
+
+    .carrousels {
+      width: 50vw;
+      // border: 1px solid black;
+
+      h5 {
+        color: black;
+        margin: 0;
+        margin-left: 15em;
+        border: 1px solid black;
+        width: max-content;
+      }
+
+      p {
+        color: black;
+        margin-left: 15em;
+        border: 1px solid black;
+        width: 50%;
+      }
+    }
+
+  }
+}
+
+#cabecera-trabajos {
+  @extend %standar-box;
+
+}
+
+.footer {
+  border: 1px solid black;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
