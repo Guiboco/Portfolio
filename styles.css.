@@ -11,6 +11,7 @@
   margin-top: 4em;
   margin-left: 25%;
   padding: 1em;
+  background: white;
 }
 
 * {
@@ -25,12 +26,9 @@
 
 body {
   background-image: url("./assets/pexels-photo-1092364.jpeg");
-}
-
-body {
-  background-image: url("./assets/pexels-photo-1092364.jpeg");
   background-size: cover;
 }
+
 .menuSuperior {
   display: flex;
   justify-content: center;
@@ -55,11 +53,7 @@ body {
   margin: 1em;
   border-radius: 1em;
   box-shadow: -23px -27px 35px -12px rgba(0, 0, 0, 0.75);
-<<<<<<< HEAD
   background: #f9f3ec;
-=======
-  background: white;
->>>>>>> ca4345f2e255801b02a1e311f6ddd9e4d7b6ad8d
 }
 .header header h1 {
   font-size: 4em;
@@ -69,11 +63,7 @@ body {
   border: 1px solid rgba(114, 113, 113, 0.404);
   border-radius: 1em;
   padding: 2em;
-<<<<<<< HEAD
   background: #f9f3ec;
-=======
-  background: white;
->>>>>>> ca4345f2e255801b02a1e311f6ddd9e4d7b6ad8d
 }
 @media (max-width: 1360px) {
   .header .header {
@@ -98,11 +88,7 @@ body {
   margin-top: 4em;
   margin-left: 15vw;
   box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
-<<<<<<< HEAD
   background: #f9f3ec;
-=======
-  background: white;
->>>>>>> ca4345f2e255801b02a1e311f6ddd9e4d7b6ad8d
 }
 .about-me-grupo .about-me-grupo h1 {
   font-size: 3.5em;
@@ -164,7 +150,6 @@ body {
 .box2 .Services {
   margin: 0;
   margin-left: 2em;
-  background: white;
 }
 @media (max-width: 1360px) {
   .box2 .Services {
@@ -173,12 +158,9 @@ body {
 }
 .box2 .subclases {
   margin: 2em;
-  background: white;
 }
 .box2 .subclases .carrousels {
   width: 50vw;
-  background: white;
-
 }
 .box2 .subclases .carrousels h5 {
   color: black;
@@ -194,7 +176,6 @@ body {
   width: 50%;
 }
 
-<<<<<<< HEAD
 .option {
   display: flex;
   margin: 5em 2em 2em 2em;
@@ -212,15 +193,6 @@ body {
   padding: 0.25em 1em 0.25em 1em;
   border-radius: 0.2em;
   margin: 1em;
-=======
-#cabecera-trabajos{
-  background: white;
-}
-.option{
-  display: flex;
-  justify-content: space-around;
-  margin: 2em;
->>>>>>> ca4345f2e255801b02a1e311f6ddd9e4d7b6ad8d
 }
 
 .footer {
