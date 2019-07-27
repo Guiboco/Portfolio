@@ -1,0 +1,186 @@
+/*$ sass --watch styles.scss styles.css*/
+#cabecera-trabajos, .box2 .subclases, .box2 .Services {
+  border: 1px solid black;
+  border-radius: 1em;
+  box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  background-color: white;
+  width: 50vw;
+  margin-top: 4em;
+  margin-left: 25%;
+  padding: 1em;
+}
+
+* {
+  font-family: roboto;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("./assets/pexels-photo-1092364.jpeg");
+}
+
+.menuSuperior {
+  display: flex;
+  justify-content: center;
+}
+.menuSuperior .list-group-item {
+  background: rgba(0, 0, 255, 0.219);
+  margin: 2em;
+}
+
+.header {
+  display: flex;
+  margin-top: 10em;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+.header .cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(114, 113, 113, 0.404);
+  padding: 5em;
+  margin: 1em;
+  border-radius: 1em;
+  box-shadow: -23px -27px 35px -12px rgba(0, 0, 0, 0.75);
+  background: white;
+}
+.header header h1 {
+  font-size: 4em;
+}
+.header .gift {
+  box-shadow: 40px -27px 35px -12px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(114, 113, 113, 0.404);
+  border-radius: 1em;
+  padding: 2em;
+  background: white;
+}
+@media (max-width: 1360px) {
+  .header .header {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .header .gift {
+    display: none;
+    box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/*about-me section*/
+.about-me-grupo {
+  /* border: 1px solid black; */
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 1em;
+  margin-top: 4em;
+  margin-left: 15vw;
+  box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
+  background: white;
+}
+.about-me-grupo .about-me-grupo h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+.about-me-grupo .about-me-grupo h2 {
+  font-size: 1.5em;
+}
+
+#refran {
+  /* border: 1px solid black; */
+  display: none;
+  color: #b4b2b2;
+  font-style: italic;
+  margin-top: 5em;
+  margin-bottom: 4em;
+  height: 20em;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+#refran p {
+  text-align: center;
+  font-size: 2em;
+  width: 50%;
+  margin-top: 2em;
+  margin-left: 15em;
+}
+@media (max-width: 1360px) {
+  #refran {
+    background: rgba(128, 128, 128, 0.486);
+    width: max-content;
+    color: black;
+    margin-top: 7em;
+  }
+}
+
+.slideIn {
+  display: block;
+  animation-duration: 3s;
+  animation-name: slidein;
+  background-image: url("./assets/steve_job_2.png");
+  background-size: cover;
+}
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.box2 {
+  display: flex;
+}
+.box2 .Services {
+  margin: 0;
+  margin-left: 2em;
+}
+@media (max-width: 1360px) {
+  .box2 .Services {
+    margin-top: 4em;
+  }
+}
+.box2 .subclases {
+  margin: 2em;
+}
+.box2 .subclases .carrousels {
+  width: 50vw;
+}
+.box2 .subclases .carrousels h5 {
+  color: black;
+  margin: 0;
+  margin-left: 15em;
+  border: 1px solid black;
+  width: max-content;
+}
+.box2 .subclases .carrousels p {
+  color: black;
+  margin-left: 15em;
+  border: 1px solid black;
+  width: 50%;
+}
+
+.option {
+  display: flex;
+  margin: 2em;
+  justify-content: space-around;
+}
+
+.footer {
+  border: 1px solid black;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
