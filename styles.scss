@@ -260,6 +260,7 @@ body {
 
 .option {
   display: flex;
+  flex-wrap: wrap;
   margin: 5em 2em 2em 2em;
   justify-content: space-around;
 
@@ -295,6 +296,8 @@ body {
   }
 
   .copy {
+    display: flex;
+    align-self: center;
     font-size: 0.5em;
   }
 }
