@@ -16,6 +16,7 @@ $breakpoint-lg: 1360px;
   margin-top: 4em;
   margin-left: 25%;
   padding: 1em;
+  background: white;
 }
 
 @mixin media($media) {
@@ -56,6 +57,7 @@ $breakpoint-lg: 1360px;
 
 body {
     background-image: url("./assets/pexels-photo-1092364.jpeg");
+    background-size: cover;
 }
 
 .menuSuperior {
