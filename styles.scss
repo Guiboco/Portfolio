@@ -5,7 +5,7 @@ $breakpoint-md: 1023px;
 $breakpoint-lg: 1360px;
 
 %standar-box {
-  border: 1px solid black;
+  // border: 1px solid black;
   border-radius: 1em;
   box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
   display: flex;
@@ -50,14 +50,31 @@ $breakpoint-lg: 1360px;
   padding: 0;
   margin: 0;
   color: #60204b;
-  h1{
+
+  h1 {
     color: #ed3833;
   }
 }
 
 body {
-    background-image: url("./assets/pexels-photo-1092364.jpeg");
-    background-size: cover;
+  background-image: url("./assets/pexels-photo-1092364.jpeg");
+  background-size: cover;
+
+}
+
+#button-return {
+  border: 1px solid black;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  width: 5%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7em;
+  background: #63aabc;
+  z-index: 1;
 }
 
 .menuSuperior {
@@ -67,6 +84,13 @@ body {
   .list-group-item {
     background: #63aabc;
     margin: 2em;
+    border-radius: 0.5em;
+
+    .ref {
+      color: #60204b;
+      text-decoration: none;
+    }
+
   }
 }
 
@@ -209,18 +233,20 @@ body {
       // border: 1px solid black;
 
       h5 {
-        color: black;
-        margin: 0;
-        margin-left: 15em;
-        border: 1px solid black;
+        color: #60204b;
+        font-size: 4em;
+        font-family: roboto;
+        margin-left: 4em;
+        // border: 1px solid black;
         width: max-content;
       }
-
-      p {
-        color: black;
-        margin-left: 15em;
-        border: 1px solid black;
-        width: 50%;
+      #html{
+        margin-left: 10em;
+        font-size: 0.6em;
+      }
+      #expres {
+        margin-left: 4em;
+        font-size: 1em;
       }
     }
 
@@ -232,15 +258,16 @@ body {
 
 }
 
-.option{
+.option {
   display: flex;
   margin: 5em 2em 2em 2em;
   justify-content: space-around;
 
-  .links{
+  .links {
     display: flex;
     justify-content: center;
-    .link{
+
+    .link {
       text-decoration: none;
       color: #60204b;
       background: #63aabcc4;
@@ -254,18 +281,20 @@ body {
 }
 
 .footer {
-  background: #f9f3ec;
+  background: #f9f3ec7e;
   box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
-  border: 1px solid black;
-  border-radius:0.5em;
+  // border: 1px solid black;
+  border-radius: 0.5em;
   padding: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1{
+
+  h1 {
     font-size: 2em;
   }
-  .copy{
+
+  .copy {
     font-size: 0.5em;
   }
 }

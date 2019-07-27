@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
             refran.style.display = "inline-block";
         }
     });
-    window.onscroll = function () {
-        console.log(
-            'top: ' + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
-            'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
-        );
-    }
+    // window.onscroll = function () {
+    //     console.log(
+    //         'top: ' + (window.pageYOffset || document.documentElement.scrollTop) + ' ' +
+    //         'left: ' + (window.pageXOffset || document.documentElement.scrollLeft)
+    //     );
+    // }
 })

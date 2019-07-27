@@ -1,6 +1,5 @@
 /*$ sass --watch styles.scss styles.css*/
 #cabecera-trabajos, .box2 .subclases, .box2 .Services {
-  border: 1px solid black;
   border-radius: 1em;
   box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
   display: flex;
@@ -29,6 +28,21 @@ body {
   background-size: cover;
 }
 
+#button-return {
+  border: 1px solid black;
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  width: 5%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7em;
+  background: #63aabc;
+  z-index: 1;
+}
+
 .menuSuperior {
   display: flex;
   justify-content: center;
@@ -36,6 +50,11 @@ body {
 .menuSuperior .list-group-item {
   background: #63aabc;
   margin: 2em;
+  border-radius: 0.5em;
+}
+.menuSuperior .list-group-item .ref {
+  color: #60204b;
+  text-decoration: none;
 }
 
 .header {
@@ -163,17 +182,19 @@ body {
   width: 50vw;
 }
 .box2 .subclases .carrousels h5 {
-  color: black;
-  margin: 0;
-  margin-left: 15em;
-  border: 1px solid black;
+  color: #60204b;
+  font-size: 4em;
+  font-family: roboto;
+  margin-left: 4em;
   width: max-content;
 }
-.box2 .subclases .carrousels p {
-  color: black;
-  margin-left: 15em;
-  border: 1px solid black;
-  width: 50%;
+.box2 .subclases .carrousels #html {
+  margin-left: 10em;
+  font-size: 0.6em;
+}
+.box2 .subclases .carrousels #expres {
+  margin-left: 4em;
+  font-size: 1em;
 }
 
 .option {
@@ -196,9 +217,8 @@ body {
 }
 
 .footer {
-  background: #f9f3ec;
+  background: #f9f3ec7e;
   box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
-  border: 1px solid black;
   border-radius: 0.5em;
   padding: 3em;
   display: flex;
