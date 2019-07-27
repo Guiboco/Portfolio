@@ -84,11 +84,7 @@ body {
   padding: 2em;
   background: #f9f3ec;
 }
-@media (max-width: 1360px) {
-  .header .header {
-    display: flex;
-    flex-flow: column wrap;
-  }
+@media (max-width: 1030px) {
   .header .gift {
     display: none;
     box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
@@ -124,6 +120,7 @@ body {
   font-style: italic;
   margin-top: 5em;
   margin-bottom: 4em;
+  width: 100vw;
   height: 20em;
   animation-duration: 3s;
   animation-name: slidein;
@@ -139,9 +136,11 @@ body {
 @media (max-width: 1360px) {
   #refran {
     background: rgba(128, 128, 128, 0.486);
-    width: max-content;
+    width: 100vw;
     color: black;
-    margin-top: 7em;
+  }
+  #refran p {
+    margin: 3em 0 0 11em;
   }
 }
 
@@ -160,6 +159,14 @@ body {
   100% {
     opacity: 1;
     transform: translate(0px, 0px);
+  }
+}
+@media (max-width: 1360px) {
+  .slideIn {
+    background: rgba(128, 128, 128, 0.486);
+    width: 100vw;
+    color: black;
+    margin-top: 7em;
   }
 }
 
@@ -196,9 +203,29 @@ body {
   margin-left: 4em;
   font-size: 1em;
 }
+@media (max-width: 1360px) {
+  .box2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .box2 .subclases {
+    margin: 5em 0 0 2em;
+  }
+  .box2 .subclases .carrousels h5 {
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 1360px) {
+  #cabecera-trabajos {
+    margin-left: 26vw;
+  }
+}
 
 .option {
   display: flex;
+  flex-wrap: wrap;
   margin: 5em 2em 2em 2em;
   justify-content: space-around;
 }
@@ -229,6 +256,8 @@ body {
   font-size: 2em;
 }
 .footer .copy {
+  display: flex;
+  align-self: center;
   font-size: 0.5em;
 }
 

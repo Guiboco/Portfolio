@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let refran = document.querySelector('#refran');
     document.addEventListener('scroll', () => {
-        if (window.pageYOffset > 400) {
+        if (window.pageYOffset > 250) {
             refran.className = "slideIn";
             refran.style.display = "inline-block";
         }

@@ -1,7 +1,7 @@
 /*$ sass --watch styles.scss styles.css*/
 $breakpoint-xs: 360px;
 $breakpoint-sm: 767px;
-$breakpoint-md: 1023px;
+$breakpoint-md: 1030px;
 $breakpoint-lg: 1360px;
 
 %standar-box {
@@ -24,21 +24,15 @@ $breakpoint-lg: 1360px;
     @media (max-width: $breakpoint-sm) {
       @content;
     }
-  }
-
-  @else if $media==sm {
+  } @else if $media==sm {
     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
       @content;
     }
-  }
-
-  @else if $media==md {
+  } @else if $media==md {
     @media (max-width: $breakpoint-md) {
       @content;
     }
-  }
-
-  @else if $media==lg {
+  } @else if $media==lg {
     @media (max-width: $breakpoint-lg) {
       @content;
     }
@@ -59,7 +53,6 @@ $breakpoint-lg: 1360px;
 body {
   background-image: url("./assets/pexels-photo-1092364.jpeg");
   background-size: cover;
-
 }
 
 #button-return {
@@ -90,7 +83,6 @@ body {
       color: #60204b;
       text-decoration: none;
     }
-
   }
 }
 
@@ -124,12 +116,7 @@ body {
     background: #f9f3ec;
   }
 
-  @include media(lg) {
-    .header {
-      display: flex;
-      flex-flow: column wrap;
-    }
-
+  @include media(md) {
     .gift {
       display: none;
       box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
@@ -169,6 +156,7 @@ body {
   font-style: italic;
   margin-top: 5em;
   margin-bottom: 4em;
+  width: 100vw;
   height: 20em;
   animation-duration: 3s;
   animation-name: slidein;
@@ -184,9 +172,11 @@ body {
 
   @include media(lg) {
     background: rgba(128, 128, 128, 0.486);
-    width: max-content;
+    width: 100vw;
     color: black;
-    margin-top: 7em;
+    p{
+      margin: 3em 0 0 11em;
+    }
   }
 }
 
@@ -208,6 +198,13 @@ body {
       opacity: 1;
       transform: translate(0px, 0px);
     }
+  }
+  
+  @include media(lg) {
+    background: rgba(128, 128, 128, 0.486);
+    width: 100vw;
+    color: black;
+    margin-top: 7em;
   }
 }
 
@@ -240,7 +237,7 @@ body {
         // border: 1px solid black;
         width: max-content;
       }
-      #html{
+      #html {
         margin-left: 10em;
         font-size: 0.6em;
       }
@@ -249,13 +246,26 @@ body {
         font-size: 1em;
       }
     }
-
+  }
+  @include media(lg){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .subclases{
+      margin: 5em 0 0 2em;
+      .carrousels{
+      h5{
+        font-size: 3.5em;
+      }}
+    }
   }
 }
 
 #cabecera-trabajos {
   @extend %standar-box;
-
+  @include media(lg){
+    margin-left: 26vw; 
+  }
 }
 
 .option {
