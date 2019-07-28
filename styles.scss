@@ -1,5 +1,6 @@
 /*$ sass --watch styles.scss styles.css*/
-$breakpoint-xs: 360px;
+$breakpoint-xss: 320px;
+$breakpoint-xs: 426px;
 $breakpoint-sm: 769px;
 $breakpoint-md: 1030px;
 $breakpoint-lg: 1440px;
@@ -18,8 +19,12 @@ $breakpoint-lg: 1440px;
 }
 
 @mixin media($media) {
-  @if $media==xs {
-    @media (max-width: $breakpoint-sm) {
+  @if $media==xss {
+    @media (max-width: $breakpoint-xss) {
+      @content;
+    }
+  } @else if $media==xs {
+    @media (max-width: $breakpoint-xs) {
       @content;
     }
   } @else if $media==sm {
@@ -58,7 +63,7 @@ body {
   position: fixed;
   right: 2%;
   bottom: 2%;
-  width: 5%;
+  width: 3em;
   height: 3em;
   display: flex;
   justify-content: center;
@@ -70,6 +75,7 @@ body {
     right: 1em;
     bottom: 1em;
   }
+ 
 }
 
 .collapsible-menu {
@@ -92,6 +98,10 @@ body {
     font-size: 1.5em;
     padding: 2em 0 2em 4em;
   }
+  @include media(sm) {
+    display: flex;
+    justify-content: center;
+  }
 }
 input:checked + label {
   background-image: url("./assets/menu_close.png");
@@ -111,6 +121,9 @@ input#menu {
   }
   @include media(sm) {
     font-size: 1em;
+  }
+  @include media(xs) {
+    font-size: 0.85em;
   }
 }
 .list-group-item {
@@ -204,6 +217,11 @@ input:checked ~ .menu-content {
     }
     h3 {
       font-size: 1em;
+    }
+  }
+  @include media(sm) {
+    h1 {
+      font-size: 2em;
     }
   }
 }
@@ -300,6 +318,14 @@ input:checked ~ .menu-content {
       font-size: 2.5em;
       width: 50%;
       margin: 2em 0 0 5em;
+    }
+  }
+  @include media(xs) {
+    p {
+      font-style: italic;
+      font-size: 2em;
+      width: 50%;
+      margin: 2em 0 0 3.5em;
     }
   }
 }
@@ -462,12 +488,39 @@ input:checked ~ .menu-content {
           width: 150px;
           height: 150px;
         }
-        h5{
+        h5 {
           margin-left: 3em;
           font-size: 3em;
-
         }
       }
+    }
+  }
+  @include media(xs) {
+    .subclases {
+      display: flex;
+      justify-content: center;
+      width: max-content;
+      .carrousels {
+        img {
+          width: 100px;
+          height: 100px;
+        }
+        h5 {
+          display: none;
+        }
+      }
+    }
+    .tecnologias {
+      display: block;
+      border-radius: 1em;
+      box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
+      color: #60204b;
+      font-size: 1em;
+      background-color: #f9f3ec;
+      margin-top: 2em;
+      width: 50vw;
+      padding: 1em;
+      background: white;
     }
   }
 }
@@ -585,13 +638,27 @@ input:checked ~ .menu-content {
       font-size: 3em;
     }
   }
-  @include media(sm){
-    .footer{
+  @include media(sm) {
+    .footer {
       display: flex;
       justify-content: center;
     }
     h1 {
       font-size: 2em;
+    }
+  }
+  @include media(xs){
+    h1 {
+      font-size: 1.75em;
+    }
+    .redes{
+      display: flex;
+      justify-content: center;
+    }
+    img{
+      margin: 1em 0 1em 0;
+      height: 50px;
+      width: 50px;
     }
   } 
 }
