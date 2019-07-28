@@ -129,6 +129,14 @@ input#menu {
   }
   @include media(xs) {
     font-size: 0.85em;
+    .list-group{
+      display: flex;
+      flex-direction: column;
+      font-size: 1em;
+      margin: 0;
+      .list-group-item{
+      width: max-content;}
+    }
   }
   @include media(xss) {
     .list-group{
@@ -357,7 +365,7 @@ input:checked ~ .menu-content {
       font-style: italic;
       font-size: 2em;
       width: 50%;
-      margin: 2em 0 0 3.5em;
+      margin: 2em 0 0 2.5em;
     }
   }
   @include media(xss){
