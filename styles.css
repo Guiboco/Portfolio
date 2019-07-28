@@ -1,5 +1,5 @@
 /*$ sass --watch styles.scss styles.css*/
-.ultimos-trabajos #cabecera-trabajos, .box2 .subclases .tecnologias, .box2 .subclases, .box2 .Services {
+.ultimos-trabajos #cabecera-trabajos, .box2 .subclases, .box2 .Services {
   border-radius: 1em;
   box-shadow: 3px 6px 24px -5px rgba(0, 0, 0, 0.75);
   display: flex;
@@ -41,24 +41,40 @@ body {
   z-index: 1;
 }
 
-.menuSuperior {
+.menuSuperior1 {
   display: flex;
   justify-content: center;
 }
-.menuSuperior .list-group-item {
+.menuSuperior1 .list-group-item {
   background: #63aabc;
   padding: 3em;
   margin: 1em;
   border-radius: 0.5em;
 }
-.menuSuperior .list-group-item .ref {
+.menuSuperior1 .list-group-item .ref {
   color: #60204b;
   text-decoration: none;
   font-size: 2em;
 }
 @media (max-width: 1440px) {
-  .menuSuperior .list-group-item {
+  .menuSuperior1 .list-group-item {
     padding: 1em;
+  }
+}
+@media (max-width: 769px) {
+  .menuSuperior1 {
+    display: none;
+  }
+}
+
+.menuSuperior2 {
+  display: none;
+}
+@media (max-width: 769px) {
+  .menuSuperior2 {
+    display: flex;
+    justify-content: center;
+    display: inline;
   }
 }
 
@@ -118,6 +134,9 @@ body {
   }
 }
 @media (max-width: 1030px) {
+  .header .cabecera {
+    padding: 3em;
+  }
   .header .gift {
     display: none;
     box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
@@ -260,14 +279,17 @@ body {
   margin-left: 4em;
   font-size: 1em;
 }
-.box2 .subclases .tecnologias {
+.box2 .tecnologias {
   display: none;
 }
 @media (max-width: 1440px) {
   .box2 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+  }
+  .box2 .Services {
+    width: 40%;
   }
   .box2 .Services h1 {
     font-size: 4em;
@@ -276,14 +298,17 @@ body {
     font-size: 2em;
   }
   .box2 .subclases {
+    width: 50%;
     margin: 5em 0 0 2em;
-    width: max-content;
   }
   .box2 .subclases .carrousels {
-    display: flex;
-    justify-content: center;
+    width: 60vw;
+    height: max-content;
   }
   .box2 .subclases .carrousels h5 {
+    font-size: 3em;
+  }
+  .box2 .tecnologias {
     display: none;
   }
 }
@@ -291,6 +316,9 @@ body {
   .box2 {
     display: flex;
     flex-direction: column;
+  }
+  .box2 .Services {
+    width: 60%;
   }
   .box2 .subclases {
     display: flex;

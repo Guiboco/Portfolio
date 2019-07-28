@@ -1,6 +1,6 @@
 /*$ sass --watch styles.scss styles.css*/
 $breakpoint-xs: 360px;
-$breakpoint-sm: 767px;
+$breakpoint-sm: 769px;
 $breakpoint-md: 1030px;
 $breakpoint-lg: 1440px;
 
@@ -23,7 +23,7 @@ $breakpoint-lg: 1440px;
       @content;
     }
   } @else if $media==sm {
-    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-sm) {
       @content;
     }
   } @else if $media==md {
@@ -68,7 +68,7 @@ body {
   z-index: 1;
 }
 
-.menuSuperior {
+.menuSuperior1 {
   display: flex;
   justify-content: center;
 
@@ -88,6 +88,19 @@ body {
     .list-group-item {
       padding: 1em;
     }
+  }
+  @include media(sm) {
+    display: none;
+  }
+}
+
+.menuSuperior2 {
+  display: none;
+
+  @include media(sm) {
+    display: flex;
+    justify-content: center;
+    display: inline;
   }
 }
 
@@ -146,6 +159,8 @@ body {
     }
   }
   @include media(md) {
+    .cabecera{
+      padding:3em;    }
     .gift {
       display: none;
       box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
@@ -299,16 +314,16 @@ body {
         font-size: 1em;
       }
     }
-    .tecnologias {
-      @extend %standar-box;
-      display: none;
-    }
+  }
+  .tecnologias {
+    display: none;
   }
   @include media(lg) {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     .Services {
+      width: 40%;
       h1 {
         font-size: 4em;
       }
@@ -317,20 +332,27 @@ body {
       }
     }
     .subclases {
+      width: 50%;
       margin: 5em 0 0 2em;
-      width: max-content;
+
       .carrousels {
-        display: flex;
-        justify-content: center;
+        width: 60vw;
+        height: max-content;
         h5 {
-          display: none;
+          font-size: 3em;
         }
       }
+    }
+    .tecnologias {
+      display: none;
     }
   }
   @include media(md) {
     display: flex;
     flex-direction: column;
+    .Services{
+      width: 60%;
+    }
     .subclases {
       display: flex;
       flex-direction: column;
