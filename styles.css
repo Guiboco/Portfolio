@@ -46,6 +46,14 @@ body {
     bottom: 1em;
   }
 }
+@media (max-width: 320px) {
+  #button-return {
+    right: 2em;
+    bottom: 2em;
+    width: 3em;
+    height: 3em;
+  }
+}
 
 .collapsible-menu {
   background-color: #f9f3ec;
@@ -108,6 +116,17 @@ input#menu {
 @media (max-width: 426px) {
   .menu-content {
     font-size: 0.85em;
+  }
+}
+@media (max-width: 320px) {
+  .menu-content .list-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    margin: 0;
+  }
+  .menu-content .list-group .list-group-item {
+    width: max-content;
   }
 }
 
@@ -209,9 +228,17 @@ input:checked ~ .menu-content {
     font-size: 1em;
   }
 }
-@media (max-width: 769px) {
+@media (max-width: 426px) {
   .header h1 {
     font-size: 2em;
+  }
+}
+@media (max-width: 320px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+  .header h3 {
+    font-size: 0.8em;
   }
 }
 
@@ -252,6 +279,14 @@ input:checked ~ .menu-content {
   }
   .about-me-grupo h2 {
     font-size: 1em;
+  }
+}
+@media (max-width: 320px) {
+  .about-me-grupo h1 {
+    font-size: 1.5em;
+  }
+  .about-me-grupo h2 {
+    font-size: 0.8em;
   }
 }
 
@@ -311,11 +346,22 @@ input:checked ~ .menu-content {
   }
 }
 @media (max-width: 426px) {
+  #refran {
+    width: 100vw;
+  }
   #refran p {
     font-style: italic;
     font-size: 2em;
     width: 50%;
     margin: 2em 0 0 3.5em;
+  }
+}
+@media (max-width: 320px) {
+  #refran p {
+    font-style: italic;
+    font-size: 2em;
+    width: 70vw;
+    margin: 2em 0 0 1.75em;
   }
 }
 
@@ -500,6 +546,20 @@ input:checked ~ .menu-content {
     background: white;
   }
 }
+@media (max-width: 320px) {
+  .box2 .Services {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
+  }
+  .box2 .Services h1 {
+    font-size: 2em;
+  }
+  .box2 .Services h3 {
+    font-size: 1em;
+  }
+}
 
 .ultimos-trabajos {
   margin: 5em 0 0 0;
@@ -570,6 +630,13 @@ input:checked ~ .menu-content {
   .ultimos-trabajos .option .links .link {
     padding: 0.25em 0.5em 0.25em 0.5em;
     font-size: 1em;
+  }
+}
+@media (max-width: 320px) {
+  .ultimos-trabajos .option img {
+    width: 250px;
+    height: 150px;
+    margin: 2em 1em 1em 1em;
   }
 }
 

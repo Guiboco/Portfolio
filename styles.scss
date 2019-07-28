@@ -75,7 +75,12 @@ body {
     right: 1em;
     bottom: 1em;
   }
- 
+  @include media(xss){
+    right: 2em;
+    bottom: 2em;
+    width: 3em;
+    height: 3em;
+  } 
 }
 
 .collapsible-menu {
@@ -124,6 +129,16 @@ input#menu {
   }
   @include media(xs) {
     font-size: 0.85em;
+  }
+  @include media(xss) {
+    .list-group{
+      display: flex;
+      flex-direction: column;
+      font-size: 1em;
+      margin: 0;
+      .list-group-item{
+      width: max-content;}
+    }
   }
 }
 .list-group-item {
@@ -219,9 +234,17 @@ input:checked ~ .menu-content {
       font-size: 1em;
     }
   }
-  @include media(sm) {
+  @include media(xs) {
     h1 {
       font-size: 2em;
+    }
+  }
+  @include media(xss) {
+    h1 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 0.8em;
     }
   }
 }
@@ -265,6 +288,14 @@ input:checked ~ .menu-content {
 
     h2 {
       font-size: 1em;
+    }
+  }
+  @include media(xss) {
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 0.8em;
     }
   }
 }
@@ -321,11 +352,20 @@ input:checked ~ .menu-content {
     }
   }
   @include media(xs) {
+    width: 100vw;
     p {
       font-style: italic;
       font-size: 2em;
       width: 50%;
       margin: 2em 0 0 3.5em;
+    }
+  }
+  @include media(xss){
+    p {
+      font-style: italic;
+      font-size: 2em;
+      width: 70vw;
+      margin: 2em 0 0 1.75em;
     }
   }
 }
@@ -523,6 +563,20 @@ input:checked ~ .menu-content {
       background: white;
     }
   }
+  @include media(xss){
+    .Services {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      text-align: center;
+      h1 {
+        font-size: 2em;
+      }
+      h3 {
+        font-size: 1em;
+      }
+    }
+  }
 }
 .ultimos-trabajos {
   margin: 5em 0 0 0;
@@ -613,6 +667,14 @@ input:checked ~ .menu-content {
       }
     }
   }
+  @include media(xss){
+    .option {
+      img {
+        width: 250px;
+        height: 150px;
+        margin: 2em 1em 1em 1em;
+      }
+  }}
 }
 .footer {
   background: #f9f3ec7e;
@@ -647,18 +709,18 @@ input:checked ~ .menu-content {
       font-size: 2em;
     }
   }
-  @include media(xs){
+  @include media(xs) {
     h1 {
       font-size: 1.75em;
     }
-    .redes{
+    .redes {
       display: flex;
       justify-content: center;
     }
-    img{
+    img {
       margin: 1em 0 1em 0;
       height: 50px;
       width: 50px;
     }
-  } 
+  }
 }
