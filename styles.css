@@ -589,6 +589,10 @@ input:checked ~ .menu-content {
   margin: 5em 0 2em 0;
   justify-content: space-evenly;
 }
+.ultimos-trabajos .option .titulo {
+  text-align: center;
+  font-size: 3em;
+}
 .ultimos-trabajos .option img {
   width: 700px;
   height: 300px;
@@ -631,21 +635,43 @@ input:checked ~ .menu-content {
   .ultimos-trabajos #cabecera-trabajos h2 {
     font-size: 1em;
   }
+  .ultimos-trabajos .option .titulo {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+  }
   .ultimos-trabajos .option img {
     width: 300px;
     height: 150px;
-    margin: 2em 2em 1em 2em;
+    margin: 0 2em 1em 0;
   }
   .ultimos-trabajos .option .links .link {
     padding: 0.25em 0.5em 0.25em 0.5em;
     font-size: 1em;
   }
 }
+@media (max-width: 426px) {
+  .ultimos-trabajos .option .titulo {
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+  }
+  .ultimos-trabajos .option img {
+    width: 300px;
+    height: 150px;
+    margin: 1em 2em 1em 1em;
+  }
+  .ultimos-trabajos .option .links .link {
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    font-size: 1em;
+    margin: 0 0 1em 0;
+  }
+}
 @media (max-width: 320px) {
   .ultimos-trabajos .option img {
     width: 250px;
     height: 150px;
-    margin: 2em 1em 1em 1em;
+    margin: 1em 1em 1em 1em;
   }
 }
 

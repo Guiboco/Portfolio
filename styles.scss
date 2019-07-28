@@ -75,12 +75,12 @@ body {
     right: 1em;
     bottom: 1em;
   }
-  @include media(xss){
+  @include media(xss) {
     right: 2em;
     bottom: 2em;
     width: 3em;
     height: 3em;
-  } 
+  }
 }
 
 .collapsible-menu {
@@ -129,23 +129,25 @@ input#menu {
   }
   @include media(xs) {
     font-size: 0.85em;
-    .list-group{
+    .list-group {
       display: flex;
       flex-direction: column;
       font-size: 1em;
       margin: 0;
-      .list-group-item{
-      width: max-content;}
+      .list-group-item {
+        width: max-content;
+      }
     }
   }
   @include media(xss) {
-    .list-group{
+    .list-group {
       display: flex;
       flex-direction: column;
       font-size: 1em;
       margin: 0;
-      .list-group-item{
-      width: max-content;}
+      .list-group-item {
+        width: max-content;
+      }
     }
   }
 }
@@ -368,7 +370,7 @@ input:checked ~ .menu-content {
       margin: 2em 0 0 2.5em;
     }
   }
-  @include media(xss){
+  @include media(xss) {
     p {
       font-style: italic;
       font-size: 2em;
@@ -571,7 +573,7 @@ input:checked ~ .menu-content {
       background: white;
     }
   }
-  @include media(xss){
+  @include media(xss) {
     .Services {
       display: flex;
       justify-content: center;
@@ -608,6 +610,10 @@ input:checked ~ .menu-content {
     width: 100vw;
     margin: 5em 0 2em 0;
     justify-content: space-evenly;
+    .titulo {
+      text-align: center;
+      font-size: 3em;
+    }
     img {
       width: 700px;
       height: 300px;
@@ -662,10 +668,15 @@ input:checked ~ .menu-content {
       }
     }
     .option {
+      .titulo {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0;
+      }
       img {
         width: 300px;
         height: 150px;
-        margin: 2em 2em 1em 2em;
+        margin: 0 2em 1em 0;
       }
       .links {
         .link {
@@ -675,14 +686,36 @@ input:checked ~ .menu-content {
       }
     }
   }
-  @include media(xss){
+  @include media(xs){
+    .option {
+      .titulo {
+        text-align: center;
+        font-size: 1em;
+        margin: 0;
+      }
+      img {
+        width: 300px;
+        height: 150px;
+        margin: 1em 2em 1em 1em;
+      }
+      .links {
+        .link {
+          padding: 0.25em 0.5em 0.25em 0.5em;
+          font-size: 1em;
+          margin: 0 0 1em 0;
+        }
+      }
+    }
+  }
+  @include media(xss) {
     .option {
       img {
         width: 250px;
         height: 150px;
-        margin: 2em 1em 1em 1em;
+        margin: 1em 1em 1em 1em;
       }
-  }}
+    }
+  }
 }
 .footer {
   background: #f9f3ec7e;
