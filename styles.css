@@ -313,10 +313,10 @@ input:checked ~ .menu-content {
 }
 #refran p {
   text-align: center;
-  font-size: 4.5em;
-  width: 50%;
+  font-size: 3em;
+  width: 30%;
   margin-top: 2.5vw;
-  margin-left: 40vw;
+  margin-left: 60vw;
   color: #f9f3ec;
 }
 @media (max-width: 1440px) {
