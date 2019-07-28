@@ -568,7 +568,7 @@ input:checked ~ .menu-content {
       font-size: 1em;
       background-color: #f9f3ec;
       margin-top: 2em;
-      width: 50vw;
+      width: 90vw;
       padding: 1em;
       background: white;
     }
@@ -577,7 +577,7 @@ input:checked ~ .menu-content {
     .Services {
       display: flex;
       justify-content: center;
-      width: 90%;
+      width: 90vw;
       text-align: center;
       h1 {
         font-size: 2em;
@@ -585,6 +585,13 @@ input:checked ~ .menu-content {
       h3 {
         font-size: 1em;
       }
+    }
+    .subclases{
+      margin: 2em;
+    }
+
+    .tecnologias{
+      margin-top: 0;
     }
   }
 }
@@ -596,6 +603,7 @@ input:checked ~ .menu-content {
 
   #cabecera-trabajos {
     @extend %standar-box;
+    width: 90vw;
     h1 {
       font-size: 5em;
     }
@@ -709,6 +717,7 @@ input:checked ~ .menu-content {
   }
   @include media(xss) {
     .option {
+      margin-top: 2em;
       img {
         width: 250px;
         height: 150px;

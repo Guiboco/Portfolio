@@ -550,7 +550,7 @@ input:checked ~ .menu-content {
     font-size: 1em;
     background-color: #f9f3ec;
     margin-top: 2em;
-    width: 50vw;
+    width: 90vw;
     padding: 1em;
     background: white;
   }
@@ -559,7 +559,7 @@ input:checked ~ .menu-content {
   .box2 .Services {
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 90vw;
     text-align: center;
   }
   .box2 .Services h1 {
@@ -568,6 +568,12 @@ input:checked ~ .menu-content {
   .box2 .Services h3 {
     font-size: 1em;
   }
+  .box2 .subclases {
+    margin: 2em;
+  }
+  .box2 .tecnologias {
+    margin-top: 0;
+  }
 }
 
 .ultimos-trabajos {
@@ -575,6 +581,9 @@ input:checked ~ .menu-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.ultimos-trabajos #cabecera-trabajos {
+  width: 90vw;
 }
 .ultimos-trabajos #cabecera-trabajos h1 {
   font-size: 5em;
@@ -668,6 +677,9 @@ input:checked ~ .menu-content {
   }
 }
 @media (max-width: 320px) {
+  .ultimos-trabajos .option {
+    margin-top: 2em;
+  }
   .ultimos-trabajos .option img {
     width: 250px;
     height: 150px;
