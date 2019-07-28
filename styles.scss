@@ -66,42 +66,69 @@ body {
   border-radius: 0.7em;
   background: #63aabc;
   z-index: 1;
+  @include media(sm) {
+    right: 1em;
+    bottom: 1em;
+  }
 }
 
-.menuSuperior1 {
-  display: flex;
-  justify-content: center;
+.collapsible-menu {
+  background-color: #f9f3ec;
+  padding: 0px 2em;
+  border-bottom: 3px solid #ed3833;
+  box-shadow: -23px -27px 35px -12px rgba(0, 0, 0, 0.75);
+}
 
-  .list-group-item {
-    background: #63aabc;
-    padding: 3em;
-    margin: 1em;
-    border-radius: 0.5em;
-
-    .ref {
-      color: #60204b;
-      text-decoration: none;
-      font-size: 2em;
-    }
-  }
+.collapsible-menu label {
+  font-family: "Roboto", cursive;
+  font-size: 5em;
+  display: block;
+  background: url("./assets/menu.png") no-repeat left center;
+  padding: 1em 0 1em 2em;
   @include media(lg) {
-    .list-group-item {
-      padding: 1em;
-    }
+    font-size: 3em;
   }
   @include media(sm) {
-    display: none;
+    font-size: 1.5em;
+    padding: 2em 0 2em 4em;
   }
 }
-
-.menuSuperior2 {
+input:checked + label {
+  background-image: url("./assets/menu_close.png");
+}
+input#menu {
   display: none;
-
-  @include media(sm) {
-    display: flex;
-    justify-content: center;
-    display: inline;
+}
+.menu-content {
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  font-family: "roboto", sans-serif;
+  font-size: 3em;
+  padding: 0 0 0 0;
+  @include media(lg) {
+    font-size: 2em;
   }
+  @include media(sm) {
+    font-size: 1em;
+  }
+}
+.list-group-item {
+  padding: 0;
+  margin: 0.3em;
+  .ref {
+    padding: 0.3em;
+    text-decoration: none;
+    color: white;
+    background: #63aabc;
+  }
+}
+/* Toggle Effect */
+input:checked ~ label {
+  background-image: url("./assets/menu_close.png");
+}
+input:checked ~ .menu-content {
+  max-height: 100%;
 }
 
 .header {
@@ -159,11 +186,24 @@ body {
     }
   }
   @include media(md) {
-    .cabecera{
-      padding:3em;    }
+    .cabecera {
+      padding: 3em;
+    }
     .gift {
       display: none;
       box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
+    }
+  }
+  @include media(sm) {
+    margin: 0;
+    .cabecera {
+      box-shadow: -1px 0px 22px 0px rgba(0, 0, 0, 0.75);
+    }
+    h1 {
+      font-size: 3em;
+    }
+    h3 {
+      font-size: 1em;
     }
   }
 }
@@ -197,6 +237,16 @@ body {
 
     h2 {
       font-size: 2em;
+    }
+  }
+  @include media(sm) {
+    margin-top: 2em;
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1em;
     }
   }
 }
@@ -240,6 +290,16 @@ body {
       font-size: 3em;
       width: 50%;
       margin: 2em 0 0 6em;
+    }
+  }
+  @include media(sm) {
+    background: rgba(128, 128, 128, 0.486);
+    width: 100vw;
+    p {
+      font-style: italic;
+      font-size: 2.5em;
+      width: 50%;
+      margin: 2em 0 0 5em;
     }
   }
 }
@@ -350,7 +410,7 @@ body {
   @include media(md) {
     display: flex;
     flex-direction: column;
-    .Services{
+    .Services {
       width: 60%;
     }
     .subclases {
@@ -377,6 +437,37 @@ body {
       width: 50vw;
       padding: 1em;
       background: white;
+    }
+  }
+  @include media(sm) {
+    .Services {
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      text-align: center;
+      h1 {
+        font-size: 2em;
+      }
+      h3 {
+        font-size: 1em;
+      }
+    }
+    .subclases {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: max-content;
+      .carrousels {
+        img {
+          width: 150px;
+          height: 150px;
+        }
+        h5{
+          margin-left: 3em;
+          font-size: 3em;
+
+        }
+      }
     }
   }
 }
@@ -446,6 +537,29 @@ body {
       }
     }
   }
+  @include media(sm) {
+    #cabecera-trabajos {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+    .option {
+      img {
+        width: 300px;
+        height: 150px;
+        margin: 2em 2em 1em 2em;
+      }
+      .links {
+        .link {
+          padding: 0.25em 0.5em 0.25em 0.5em;
+          font-size: 1em;
+        }
+      }
+    }
+  }
 }
 .footer {
   background: #f9f3ec7e;
@@ -471,4 +585,13 @@ body {
       font-size: 3em;
     }
   }
+  @include media(sm){
+    .footer{
+      display: flex;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 2em;
+    }
+  } 
 }

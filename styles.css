@@ -40,42 +40,84 @@ body {
   background: #63aabc;
   z-index: 1;
 }
+@media (max-width: 769px) {
+  #button-return {
+    right: 1em;
+    bottom: 1em;
+  }
+}
 
-.menuSuperior1 {
-  display: flex;
-  justify-content: center;
+.collapsible-menu {
+  background-color: #f9f3ec;
+  padding: 0px 2em;
+  border-bottom: 3px solid #ed3833;
+  box-shadow: -23px -27px 35px -12px rgba(0, 0, 0, 0.75);
 }
-.menuSuperior1 .list-group-item {
-  background: #63aabc;
-  padding: 3em;
-  margin: 1em;
-  border-radius: 0.5em;
-}
-.menuSuperior1 .list-group-item .ref {
-  color: #60204b;
-  text-decoration: none;
-  font-size: 2em;
+
+.collapsible-menu label {
+  font-family: "Roboto", cursive;
+  font-size: 5em;
+  display: block;
+  background: url("./assets/menu.png") no-repeat left center;
+  padding: 1em 0 1em 2em;
 }
 @media (max-width: 1440px) {
-  .menuSuperior1 .list-group-item {
-    padding: 1em;
+  .collapsible-menu label {
+    font-size: 3em;
   }
 }
 @media (max-width: 769px) {
-  .menuSuperior1 {
-    display: none;
+  .collapsible-menu label {
+    font-size: 1.5em;
+    padding: 2em 0 2em 4em;
   }
 }
 
-.menuSuperior2 {
+input:checked + label {
+  background-image: url("./assets/menu_close.png");
+}
+
+input#menu {
   display: none;
 }
-@media (max-width: 769px) {
-  .menuSuperior2 {
-    display: flex;
-    justify-content: center;
-    display: inline;
+
+.menu-content {
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  font-family: "roboto", sans-serif;
+  font-size: 3em;
+  padding: 0 0 0 0;
+}
+@media (max-width: 1440px) {
+  .menu-content {
+    font-size: 2em;
   }
+}
+@media (max-width: 769px) {
+  .menu-content {
+    font-size: 1em;
+  }
+}
+
+.list-group-item {
+  padding: 0;
+  margin: 0.3em;
+}
+.list-group-item .ref {
+  padding: 0.3em;
+  text-decoration: none;
+  color: white;
+  background: #63aabc;
+}
+
+/* Toggle Effect */
+input:checked ~ label {
+  background-image: url("./assets/menu_close.png");
+}
+
+input:checked ~ .menu-content {
+  max-height: 100%;
 }
 
 .header {
@@ -142,6 +184,20 @@ body {
     box-shadow: -30px 27px 65px -15px rgba(0, 0, 0, 0.75);
   }
 }
+@media (max-width: 769px) {
+  .header {
+    margin: 0;
+  }
+  .header .cabecera {
+    box-shadow: -1px 0px 22px 0px rgba(0, 0, 0, 0.75);
+  }
+  .header h1 {
+    font-size: 3em;
+  }
+  .header h3 {
+    font-size: 1em;
+  }
+}
 
 /*about-me section*/
 .about-me-grupo {
@@ -169,6 +225,17 @@ body {
   }
   .about-me-grupo h2 {
     font-size: 2em;
+  }
+}
+@media (max-width: 769px) {
+  .about-me-grupo {
+    margin-top: 2em;
+  }
+  .about-me-grupo h1 {
+    font-size: 2em;
+  }
+  .about-me-grupo h2 {
+    font-size: 1em;
   }
 }
 
@@ -213,6 +280,18 @@ body {
     font-size: 3em;
     width: 50%;
     margin: 2em 0 0 6em;
+  }
+}
+@media (max-width: 769px) {
+  #refran {
+    background: rgba(128, 128, 128, 0.486);
+    width: 100vw;
+  }
+  #refran p {
+    font-style: italic;
+    font-size: 2.5em;
+    width: 50%;
+    margin: 2em 0 0 5em;
   }
 }
 
@@ -343,6 +422,34 @@ body {
     background: white;
   }
 }
+@media (max-width: 769px) {
+  .box2 .Services {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+  }
+  .box2 .Services h1 {
+    font-size: 2em;
+  }
+  .box2 .Services h3 {
+    font-size: 1em;
+  }
+  .box2 .subclases {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: max-content;
+  }
+  .box2 .subclases .carrousels img {
+    width: 150px;
+    height: 150px;
+  }
+  .box2 .subclases .carrousels h5 {
+    margin-left: 3em;
+    font-size: 3em;
+  }
+}
 
 .ultimos-trabajos {
   margin: 5em 0 0 0;
@@ -398,6 +505,23 @@ body {
     font-size: 2em;
   }
 }
+@media (max-width: 769px) {
+  .ultimos-trabajos #cabecera-trabajos h1 {
+    font-size: 2em;
+  }
+  .ultimos-trabajos #cabecera-trabajos h2 {
+    font-size: 1em;
+  }
+  .ultimos-trabajos .option img {
+    width: 300px;
+    height: 150px;
+    margin: 2em 2em 1em 2em;
+  }
+  .ultimos-trabajos .option .links .link {
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    font-size: 1em;
+  }
+}
 
 .footer {
   background: #f9f3ec7e;
@@ -419,6 +543,15 @@ body {
 @media (max-width: 1440px) {
   .footer h1 {
     font-size: 3em;
+  }
+}
+@media (max-width: 769px) {
+  .footer .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .footer h1 {
+    font-size: 2em;
   }
 }
 
